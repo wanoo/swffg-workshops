@@ -1,0 +1,22 @@
+{
+ "WKSH.settings.install.name": "Contenu du module",
+ "WKSH.settings.install.label": "Installer / réinstaller le contenu",
+ "WKSH.settings.install.hint": "Crée le dossier et les 3 macros d'artisanat dans ce monde (dans la langue du monde).",
+ "WKSH.install.title": "Ateliers d'artisanat — Installation",
+ "WKSH.install.prompt": "Installer les macros d'artisanat (sabre laser, potions & talismans, réglage) dans ce monde ?",
+ "WKSH.install.promptHint": "Réinstallable à tout moment via Configuration des options → Sabacc & Workshops.",
+ "WKSH.install.yes": "Installer",
+ "WKSH.install.later": "Plus tard",
+ "WKSH.install.gmOnly": "Seul le MJ peut installer le contenu.",
+ "WKSH.install.done": "Ateliers d'artisanat : {n} éléments installés.",
+ "WKSH.folders.craft": "⚒️ Artisanat",
+ "WKSH.macros.saber-forge": "⚔️ Fabrication / Recustom — Sabre Laser",
+ "WKSH.macros.potions": "⚗️ Fabrication — Potions & Talismans",
+ "WKSH.macros.tuning": "🔧 Réglage / Accessoires d'objet",
+ "WKSH.common.cancel": "Annuler",
+ "WKSH.common.close": "Fermer",
+ "WKSH.common.yes": "Oui",
+ "WKSH.common.no": "Non",
+ "WKSH.common.assignCharacter": "Assigne-toi un personnage (clic droit sur l'acteur → Assigner) ou sélectionne ton token.",
+ "WKSH.common.gmOnly": "Réservé au MJ."
+}

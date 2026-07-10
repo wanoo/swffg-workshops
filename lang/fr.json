@@ -1,0 +1,583 @@
+{
+ "WKSH": {
+  "settings": {
+   "install": {
+    "name": "Contenu du module",
+    "label": "Installer / réinstaller le contenu",
+    "hint": "Crée le dossier et les 3 macros d'artisanat dans ce monde (dans la langue du monde)."
+   }
+  },
+  "install": {
+   "title": "Ateliers d'artisanat — Installation",
+   "prompt": "Installer les macros d'artisanat (sabre laser, potions & talismans, réglage) dans ce monde ?",
+   "promptHint": "Réinstallable à tout moment via Configuration des options → Sabacc & Workshops.",
+   "yes": "Installer",
+   "later": "Plus tard",
+   "gmOnly": "Seul le MJ peut installer le contenu.",
+   "done": "Ateliers d'artisanat : {n} éléments installés."
+  },
+  "folders": {
+   "craft": "⚒️ Artisanat"
+  },
+  "macros": {
+   "saber-forge": "⚔️ Fabrication / Recustom — Sabre Laser",
+   "potions": "⚗️ Fabrication — Potions & Talismans",
+   "tuning": "🔧 Réglage / Accessoires d'objet"
+  },
+  "common": {
+   "cancel": "Annuler",
+   "close": "Fermer",
+   "yes": "Oui",
+   "no": "Non",
+   "assignCharacter": "Assigne-toi un personnage (clic droit sur l'acteur → Assigner) ou sélectionne ton token.",
+   "gmOnly": "Réservé au MJ."
+  },
+  "potions": {
+   "title": "⚗️ Fabrication — Potions & Talismans",
+   "intro": "Artisan : <b>{name}</b> — l'alchimie fait appel à la <b>Force</b> (+1 dé de Force au test). Enc. finale 0.",
+   "lbl": {
+    "recipe": "Recette",
+    "skill": "Compétence de fabrication"
+   },
+   "opt": {
+    "recipe": "{name} — {diff}, {time} h, {cost} cr (R{rarity})"
+   },
+   "btn": {
+    "roll": "Fabriquer + lancer le test",
+    "create": "Créer l'objet"
+   },
+   "type": {
+    "potion": "🧪 Potion",
+    "talisman": "🔮 Talisman"
+   },
+   "word": {
+    "potion": "Potion",
+    "talisman": "Talisman"
+   },
+   "sum": {
+    "test": "<b>Test :</b> {diff} · <b>Temps :</b> {time} h · <b>Matériaux :</b> {cost} cr (Rareté {rarity})"
+   },
+   "symb": "<b>Dépense des symboles</b> — l'alchimie fait appel à la Force {force} ({light}/{dark} génèrent avantages/menaces) :<br>{suc} chaque succès net : −2 h de confection (min. 1 h) · {adv} : effet bénéfique · {adv}{adv} : durée / minutie · {adv}{adv}{adv} : lot / puissance · {tri} ou 4 {adv} : formule apprise · {thr}{des} : complication.",
+   "roll": {
+    "flavor": "⚗️ {type} : {name} — {skill} ({diff})"
+   },
+   "res": {
+    "title": "⚗️ Résolution — {name}",
+    "success": "✅ Fabrication réussie — {pips} {n} succès net",
+    "fail": "❌ Échec — la fabrication rate (ingrédients gâchés).",
+    "despair": "💀 Désastre : conséquence grave (MJ).",
+    "available": "Disponible à dépenser :",
+    "complication": "· complication",
+    "spendHeader": "<b>Dépense des avantages / triomphes</b> (coche ce que tu appliques) :",
+    "remaining": "Reste : {adv} {tri}"
+   },
+   "cost": {
+    "triOrAdv": "{tri} ou 4 {adv}"
+   },
+   "item": {
+    "batchSuffix": " (lot ×2)",
+    "madeBy": "Fabriqué par {name} ({skill}). Temps : {time} h · Matériaux : {cost} cr.",
+    "upgrades": "✨ <b>Améliorations :</b> {list}.",
+    "triumphLeft": "★ Triomphe non dépensé — effet narratif majeur au choix du MJ."
+   },
+   "done": "⚗️ {item} ajouté à l'inventaire de {name}.",
+   "chat": {
+    "created": "{item} — créé !",
+    "meta": "Temps {time} h · Matériaux {cost} cr"
+   },
+   "diff": {
+    "0": "Simple (—)",
+    "1": "Facile (◆)",
+    "2": "Moyenne (◆◆)",
+    "3": "Difficile (◆◆◆)",
+    "4": "Redoutable (◆◆◆◆)",
+    "5": "Formidable (◆◆◆◆◆)"
+   },
+   "skill": {
+    "cool": "Sang-froid",
+    "discipline": "Discipline",
+    "education": "Connaissance (Éducation)",
+    "lore": "Connaissance (Traditions)"
+   },
+   "rec": {
+    "poison": {
+     "n": "Poison",
+     "eff": "Inflige un poison : la cible teste Vigueur ou subit des dégâts de blessure."
+    },
+    "protAmulet": {
+     "n": "Amulette protectrice",
+     "eff": "+1 Défense (mêlée & distance) tant que portée."
+    },
+    "acid": {
+     "n": "Acide",
+     "eff": "Détruit matériaux/armures ; dégâts ignorant l'Encaissement."
+    },
+    "healPotion": {
+     "n": "Potion de soin",
+     "eff": "Soigne 5 blessures (une fois par rencontre)."
+    },
+    "stimulant": {
+     "n": "Stimulant",
+     "eff": "Retire 1 blessure critique ou +1 rang de carac. 5 rounds."
+    },
+    "fearFetish": {
+     "n": "Fétiche de peur",
+     "eff": "Impose un test de Peur aux ennemis proches."
+    },
+    "fireBrew": {
+     "n": "Breuvage de feu",
+     "eff": "Prochaine attaque au contact gagne Incendiaire 2."
+    },
+    "vigorElixir": {
+     "n": "Élixir de vigueur",
+     "eff": "Récupère tout le stress ; immunise à la Peur 1 rencontre."
+    },
+    "weakPotion": {
+     "n": "Potion d'affaiblissement",
+     "eff": "La cible subit −1 rang à une caractéristique (Vigueur pour résister)."
+    },
+    "destinyTalisman": {
+     "n": "Talisman du destin",
+     "eff": "1×/session : relancer un jet ou convertir un point de Destin."
+    },
+    "powerAmulet": {
+     "n": "Amulette de pouvoir",
+     "eff": "+1 dé de Force à un pouvoir choisi tant que portée."
+    },
+    "willPotion": {
+     "n": "Potion des volontés",
+     "eff": "Domine la volonté d'une cible (Discipline pour résister)."
+    },
+    "healAccel": {
+     "n": "Accélérateur de guérison",
+     "eff": "Double la vitesse de guérison naturelle du porteur."
+    },
+    "neuralCharm": {
+     "n": "Charme neural",
+     "eff": "Brouille l'esprit : +2 setback aux tests sociaux contre le porteur."
+    },
+    "shieldAmulet": {
+     "n": "Amulette de bouclier",
+     "eff": "Absorbe la 1ʳᵉ blessure critique de la rencontre."
+    },
+    "lifeWater": {
+     "n": "Eau de vie",
+     "eff": "Ressuscite ou stabilise un mourant ; effets narratifs majeurs."
+    },
+    "resistSymbol": {
+     "n": "Symbole de résistance",
+     "eff": "+2 Encaissement et immunité à un type d'énergie 1 rencontre."
+    }
+   },
+   "spend": {
+    "boon": {
+     "label": "Effet bénéfique renforcé",
+     "desc": "Potion : Fortification / Revigorante · Talisman : renforcement"
+    },
+    "dur": {
+     "label": "Durée prolongée",
+     "desc": "+1 h d'effet, ou +1 round en combat"
+    },
+    "thrift": {
+     "label": "Minutie",
+     "desc": "Matériaux −50 % pour cette fabrication"
+    },
+    "batch": {
+     "label": "Lot",
+     "desc": "2 doses (potion) / 2 exemplaires (talisman)"
+    },
+    "potent": {
+     "label": "Puissance",
+     "desc": "+1 difficulté pour résister à l'effet"
+    },
+    "virul": {
+     "label": "Virulence / Amplification",
+     "desc": "Effet aggravé (★ Triomphe)"
+    },
+    "formula": {
+     "label": "Formule apprise",
+     "desc": "−1 difficulté aux prochaines fabrications de cette recette (★ ou 4 ⬆)"
+    }
+   }
+  },
+  "saber": {
+   "title": "⚔️ Fabrication / Recustom — Sabre Laser",
+   "intro": "Artisan : <b>{name}</b> — le <b>cristal</b> définit le profil (données officielles du dataset). Mods « possibles » = upgrades Étape 2, tests séparés.",
+   "mode": {
+    "recustom": "Recustomiser une arme existante",
+    "new": "Nouveau sabre (poignée du compendium)"
+   },
+   "lbl": {
+    "mode": "Mode",
+    "hilt": "1. Poignée",
+    "own": "1. Arme à recustomiser",
+    "crystal": "2. Cristal kyber",
+    "crystalHint": "(2 empl.)",
+    "acc": "3. Accessoires"
+   },
+   "opt": {
+    "hilt": "{name} — Dmg {dmg}/Crit {crit} · {hp} empl.{price}",
+    "owned": "{name} — {hp} empl.",
+    "crystal": "{name} — Dmg {dmg}/Crit {crit}{price} (R{rarity})",
+    "accMeta": "({hp} empl., {price} cr, R{rarity})",
+    "priceSuffix": " · {price} cr"
+   },
+   "btn": {
+    "make": "Forger / Recustom + test",
+    "sheetOnly": "Fiche seule"
+   },
+   "sum": {
+    "possibleMods": "<b>Mods possibles</b> (Étape 2) : {list}",
+    "profile": "<b>Profil</b> — Dégâts <b>{dmg}</b> · Critique <b>{crit}</b> · Contact · Enc. {enc}",
+    "quals": "<b>Qualités</b> : {list}",
+    "slots": "Emplacements",
+    "over": " ⚠️ dépassement",
+    "cost": "<b>Coût</b> : {price} cr · <b>Rareté</b> : {rarity}",
+    "test": "<b>Test :</b> Mécanique {d3} (ou Connaissance/Culture) · 3 jours · matériaux 300 cr ou Système D {d2}.",
+    "testHint": "Sur son propre sabre : −2 difficulté (min. Simple). Sensible à la Force : +dé de Force {force}.",
+    "addedLine": "{name} : {list}"
+   },
+   "confirm": {
+    "overTitle": "Dépassement",
+    "overBody": "{used} emplacements pour {tot}. Continuer ?"
+   },
+   "roll": {
+    "flavor": "⚔️ Fabrication : sabre laser ({crystal}) — Mécanique Difficile (◆◆◆)"
+   },
+   "fail": {
+    "title": "⚔️ Fabrication ratée — {crystal}",
+    "body": "Le test de Mécanique échoue : le sabre n'est pas assemblé (composants récupérables).",
+    "despair": "💀 Désastre : cristal ou pièce endommagé (au choix du MJ).",
+    "hint": "Retente avec plus de temps, de meilleurs outils, ou en dépensant un point de Destin.",
+    "notify": "⚔️ Fabrication ratée ({crystal}) — aucun sabre créé."
+   },
+   "item": {
+    "name": "Sabre laser ({crystal})",
+    "forgedBy": "Forgé par {name}."
+   },
+   "recap": {
+    "forge": "Forge",
+    "recustom": "Recustom",
+    "weapon": "Arme",
+    "hilt": "Poignée",
+    "accs": "Accessoires",
+    "profile": "<b>Profil</b> : Dégâts <b>{dmg}</b> · Critique <b>{crit}</b> · Contact · Enc. {enc}",
+    "meta": "<b>Emplacements</b> : {used}/{tot} · <b>Coût</b> : {price} cr · <b>Rareté</b> : {rarity}",
+    "effects": "Effets",
+    "possibleMods": "<b>Mods possibles (Étape 2)</b> — chacun : trousse à outils, 100 cr, Mécanique {pips} :"
+   },
+   "res": {
+    "success": "<b>✅ Test réussi</b> — {pips} {n} succès",
+    "adv": "→ réduis le temps ou pose un mod gratuit",
+    "tri": "→ mod gratuit / qualité exceptionnelle",
+    "thr": "légère complication",
+    "des": "désastre (MJ)",
+    "noRoll": "Fiche seule (sans test) — à valider par un jet de Mécanique en jeu."
+   },
+   "done": {
+    "recustom": "⚔️ {name} recustomisé — Dmg {dmg}/Crit {crit}.",
+    "forge": "⚔️ {name} forgé sur {actor} — Dmg {dmg}/Crit {crit}."
+   },
+   "qual": {
+    "breach": "Qualité Brèche",
+    "burn": "Qualité Incendiaire",
+    "sunder": "Qualité Briseur",
+    "vicious": "Qualité Sanguinaire",
+    "disorient": "Qualité Désorientation",
+    "defensive": "Qualité Parade",
+    "stunDamage": "Qualité Dégâts étourdissants",
+    "inaccurate": "Qualité Imprécis",
+    "stun": "Qualité Étourdissement",
+    "concussive": "Qualité Choc",
+    "knockdown": "Qualité Renversement",
+    "pierce": "Qualité Perforant",
+    "superior": "Qualité Bonne qualité"
+   },
+   "mod": {
+    "dmg": "Dégâts",
+    "burn": "Incendiaire",
+    "vicious": "Sanguinaire",
+    "disorient": "Désorientation",
+    "concussive": "Choc",
+    "defensive": "Parade",
+    "breach": "Brèche",
+    "knockdown": "Renversement",
+    "stun": "Étourdissement",
+    "pierce": "Perforant",
+    "crystalNoHp": "Cristal sans coût PV"
+   },
+   "att": {
+    "BARABLS": "Bille de Barab",
+    "CORRUPTCRYS": "Cristal corrompu",
+    "CRACKEDCRYS": "Cristal fêlé",
+    "JEDHACR": "Cristal de Jedha fêlé",
+    "DANTARI": "Cristal Dantari",
+    "DRAGITE": "Gemme de Dragite",
+    "ETAAN": "Cristal Etaan",
+    "GHOSTFIRE": "Cristal Ghostfire",
+    "ILUM": "Cristal d’Ilum",
+    "KIMBER": "Pierre de Kimber",
+    "KRAYT": "Perle de dragon Krayt",
+    "LORRDIAN": "Gemme Lorrdienne",
+    "MEPHITE": "Cristal de Méphite",
+    "NISHSTONE": "Pierre de nishalorite",
+    "SAPITH": "Gemme de Saphite",
+    "SEEKERCRYS": "Cristal chercheur",
+    "SOLARICRYS": "Cristal Solari",
+    "SORIAN": "Cristal Sorian",
+    "TAINTNIGHT": "Cristal corrompu des Sœurs de la Nuit",
+    "UNSTKYBER": "Cristal kyber instable",
+    "VARPCRYST": "Cristal de varpeline",
+    "THONTIIN": "Cristal thontiin",
+    "ZOPHIS": "Cristal zophis",
+    "CHRISTOPHCRYS": "Cristal de Christophsis",
+    "BLADEDRAIN": "Drain de lame",
+    "CCARRAY": "Réseau de cristaux cyclique",
+    "CURVEDHILT": "Poignée courbe",
+    "CUSTGRIP": "Poignée personnalisée",
+    "DUALPHASE": "Modificateur de phase",
+    "EXTHILT": "Poignée allongée",
+    "FLICKERPHASE": "Lame Flickerphase",
+    "HILTMASK": "Kit de camouflage de poignée",
+    "POMMELCAP": "Embout de pommeau",
+    "REMAGSH": "Blindage magnétique renforcé",
+    "STUNBLAST": "Accessoire de blaster à étourdissement",
+    "SUPHILT": "Poignée personnalisée supérieure",
+    "THISSCOIL": "Bobines de stabilisation thisspiasiennes",
+    "THOLOHILT": "Poignée en bois de cœur tholothien",
+    "TRAINEMIT": "Emetteur pour sabre laser d’entraînement",
+    "WALKHILT": "Poignée camouflée en canne de marche",
+    "CATFAILMOD": "Modification de défaillance catastrophique"
+   },
+   "note": {
+    "CORRUPTCRYS": {
+     "1": "Lorsque le personnage maniant ce sabre l",
+     "2": "Lorsque la Moralité du porteur atteint 7"
+    },
+    "CRACKEDCRYS": {
+     "1": "Si un test de combat aboutit à un [DE], "
+    },
+    "DANTARI": {
+     "1": "Lorsqu’il effectue un test de pouvoir de"
+    },
+    "ETAAN": {
+     "1": "Si le porteur utilise le talent Renvoi A"
+    },
+    "GHOSTFIRE": {
+     "1": "Le porteur peut dépenser [AD][AD][AD][AD"
+    },
+    "MEPHITE": {
+     "1": "Les personnages sensibles à la Force uti"
+    },
+    "NISHSTONE": {
+     "1": "Ajoute automatiquement [AD] aux tests ef"
+    },
+    "SEEKERCRYS": {
+     "1": "Les porteurs sensibles à la Force peuven"
+    },
+    "SOLARICRYS": {
+     "1": "Réduit de 1 le stress de l’incidente Ren",
+     "2": "Le cristal cesse de fonctionner si la Mo"
+    },
+    "SORIAN": {
+     "1": "Lorsqu’il est utilisé avec le talent Par"
+    },
+    "UNSTKYBER": {
+     "1": "En manœuvre, le porteur augmente sa vale"
+    },
+    "VARPCRYST": {
+     "1": "Lorsqu’il dépense [TR] pour infliger une"
+    },
+    "THONTIIN": {
+     "1": "Une fois par rencontre, permet d’ignorer"
+    },
+    "ZOPHIS": {
+     "1": "Lorsque l’attribut Briseur est activé, l",
+     "2": "[TH][TH][TH] ou [DE] peut être dépensé p"
+    },
+    "BLADEDRAIN": {
+     "1": "Lorsqu’il effectue un test de combat vis",
+     "2": "[TH][TH][TH] provoque la rétraction de l"
+    },
+    "CCARRAY": {
+     "1": "Ajoute un cristal supplémentaire sans coût en PV",
+     "2": "Lorsque le sabre laser est allumé, peut "
+    },
+    "CURVEDHILT": {
+     "1": "Ajoute [AD] automatique aux tests de com"
+    },
+    "CUSTGRIP": {
+     "1": "Retire 1 dé(s) de menace (setback)",
+     "2": "Toute personne autre que le propriétaire"
+    },
+    "DUALPHASE": {
+     "1": "Peut changer la longueur de la lame une "
+    },
+    "FLICKERPHASE": {
+     "1": "Lorsqu’on attaque avec ce sabre laser, l"
+    },
+    "HILTMASK": {
+     "1": "Ajoute [FA][FA] à toute tentative de tro"
+    },
+    "THISSCOIL": {
+     "1": "Retire 1 dé(s) de menace (setback)"
+    },
+    "THOLOHILT": {
+     "1": "Le MJ peut dépenser [TH][TH][TH][TH] ou "
+    },
+    "WALKHILT": {
+     "1": "Sauf s’il est allumé, il faut réussir un"
+    },
+    "CATFAILMOD": {
+     "1": "Lorsque le sabre laser est activé, il en"
+    }
+   }
+  },
+  "tuning": {
+   "title": "🔧 Atelier de Mod",
+   "warn": {
+    "noItems": "{name} n'a aucune arme/armure avec des emplacements.",
+    "noAttach": "{name} n'a aucun accessoire posé avec des mods activables. Pose d'abord un accessoire (ou glisse-le depuis le compendium sur l'objet)."
+   },
+   "mode": {
+    "intro": "Sur l'équipement de <b>{name}</b>, que veux-tu faire ?",
+    "install": "<b>Poser un accessoire</b> : monte une pièce sur un emplacement (difficulté selon rareté).",
+    "mod": "<b>Activer un mod</b> : améliore un accessoire déjà posé — la difficulté monte de 1 par mod déjà activé sur cet accessoire (règle du livre)."
+   },
+   "btn": {
+    "install": "Poser un accessoire",
+    "mod": "Activer un mod (accessoire posé)",
+    "installRoll": "Installer + lancer le test",
+    "noRoll": "Noter sans test",
+    "modRoll": "Tenter la modif + test",
+    "modNoRoll": "Activer sans test"
+   },
+   "install": {
+    "title": "🔧 Réglage — pose d'un accessoire"
+   },
+   "lbl": {
+    "item": "Objet à régler",
+    "att": "Accessoire",
+    "attInstalled": "Accessoire posé",
+    "mod": "Mod à activer"
+   },
+   "opt": {
+    "item": "{name} — Emp. {used}/{total}",
+    "att": "{name} (Emp.{hp}, {price}cr, R{rarity})",
+    "attMod": "{item} ▸ {att} — {active}/{total} mods activés"
+   },
+   "sum": {
+    "free": "<b>{name}</b> — emplacements libres : {free}",
+    "att": "Accessoire : <b>{name}</b> — coûte <b>{hp}</b> emplacement(s), {price} cr, rareté {rarity}.",
+    "notEnough": "⚠️ Pas assez d'emplacements.",
+    "test": "<b>Test :</b> Mécanique {diff} — trouver la pièce : {price} cr ou test de Système D."
+   },
+   "confirm": {
+    "title": "Emplacements insuffisants",
+    "body": "{name} coûte {hp} emplacement(s), {free} libre(s). Forcer ?"
+   },
+   "roll": {
+    "install": "🔧 Installation : {att} sur {item} — Mécanique",
+    "mod": "⚙️ Modification n°{n} : {mod} sur {att} — Mécanique {diff}"
+   },
+   "fail": {
+    "title": "🔧 Installation ratée — {att}",
+    "body": "Le test de Mécanique échoue : l'accessoire n'est pas monté sur {item}.",
+    "despair": "💀 Désastre : pièce perdue ou objet endommagé (MJ).",
+    "hint": "Retente avec plus de temps ou de meilleurs outils.",
+    "notify": "🔧 Installation ratée ({att}) — rien de posé."
+   },
+   "card": {
+    "title": "🔧 Réglage — {item}",
+    "installed": "Accessoire installé : <b>{att}</b>",
+    "meta": "Emplacements : {used}/{total} · Coût : {price} cr · Rareté {rarity}"
+   },
+   "res": {
+    "success": "<b>✅ Test réussi</b> — {pips} {n} succès",
+    "adv": "→ réduis le temps ou pose un mod gratuit",
+    "tri": "mod gratuit",
+    "thr": "légère complication",
+    "des": "désastre",
+    "noRoll": "Noté sans test — à valider par un jet de Mécanique en jeu."
+   },
+   "trace": "🔧 <b>{att}</b> installé (Emp.{hp}).",
+   "done": {
+    "install": "{att} posé sur {item}. Pour la méca complète, glisse l'accessoire depuis le compendium.",
+    "mod": "⚙️ {mod} activé sur {att} ({now}/{total})."
+   },
+   "mod": {
+    "title": "⚙️ Activer un mod d'accessoire",
+    "noneLeft": "— aucune option restante —",
+    "fallbackName": "Mod",
+    "fallbackAtt": "Accessoire",
+    "count": "Mods activés sur cet accessoire : <b>{active}/{total}</b>",
+    "exhausted": "plus d'option disponible",
+    "testLine": "<b>Modification n° {n}</b> · <b>Test :</b> Mécanique {diff}",
+    "hint": "Base Moyenne {pips}, +1 par mod déjà activé sur cet accessoire. Coût : trousse à outils + 100 cr.",
+    "noneWarn": "Aucune option de mod restante sur cet accessoire."
+   },
+   "modFail": {
+    "title": "⚙️ Modification ratée — {mod}",
+    "body": "Le test de Mécanique échoue : le mod n'est pas activé sur {att}.",
+    "despair": "💀 Désastre : accessoire endommagé, un mod déjà posé se désactive (MJ).",
+    "hint": "La difficulté ne monte pas (le mod n'est pas installé). Retente avec plus de temps / outils.",
+    "notify": "⚙️ Modification ratée ({mod}) sur {att}."
+   },
+   "modCard": {
+    "title": "⚙️ Modification — {item} ▸ {att}",
+    "activated": "Mod activé : <b>{mod}</b>",
+    "ok": "réussi",
+    "noRoll": "(sans test)",
+    "next": "Mods activés sur cet accessoire : <b>{now}/{total}</b> · prochaine modif = {diff}",
+    "adv": "→ temps réduit ou −1 diff. sur la prochaine",
+    "tri": "mod suivant gratuit",
+    "thr": "complication",
+    "des": "désastre"
+   },
+   "diff": {
+    "0": "Simple",
+    "1": "Facile",
+    "2": "Moyenne",
+    "3": "Difficile",
+    "4": "Redoutable",
+    "5": "Formidable"
+   },
+   "att": {
+    "custGrip": {
+     "n": "Poignée personnalisée",
+     "note": "−1 {setback} aux tests de combat de l'utilisateur."
+    },
+    "balStock": {
+     "n": "Crosse équilibrée",
+     "note": "Qualité Verrouillage."
+    },
+    "telescope": {
+     "n": "Viseur télescopique",
+     "note": "Retire jusqu'à 2 {setback} dus à la portée (longue/extrême)."
+    },
+    "magazine": {
+     "n": "Chargeur amélioré"
+    },
+    "bipod": {
+     "n": "Bipied",
+     "note": "−1 difficulté {diff} si posé (manœuvre)."
+    },
+    "laserSight": {
+     "n": "Mire laser",
+     "note": "Ajoute {boost} aux tests d'attaque à courte portée."
+    },
+    "cortosis": {
+     "n": "Forge en cortosis",
+     "note": "Qualité Cortosis."
+    },
+    "plating": {
+     "n": "Doublure de plaques",
+     "note": "(armure) +1 Encaissement."
+    },
+    "custom": {
+     "n": "Autre / personnalisé"
+    }
+   }
+  }
+ }
+}

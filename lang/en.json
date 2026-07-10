@@ -1,0 +1,583 @@
+{
+ "WKSH": {
+  "settings": {
+   "install": {
+    "name": "Module content",
+    "label": "Install / reinstall content",
+    "hint": "Creates the folder and the 3 crafting macros in this world (in the world's language)."
+   }
+  },
+  "install": {
+   "title": "Crafting Workshops — Setup",
+   "prompt": "Install the crafting macros (lightsaber, potions & talismans, tuning) into this world?",
+   "promptHint": "You can reinstall at any time from Configure Settings → Sabacc & Workshops.",
+   "yes": "Install",
+   "later": "Later",
+   "gmOnly": "Only the GM can install the content.",
+   "done": "Crafting Workshops: {n} items installed."
+  },
+  "folders": {
+   "craft": "⚒️ Crafting"
+  },
+  "macros": {
+   "saber-forge": "⚔️ Craft / Recustom — Lightsaber",
+   "potions": "⚗️ Crafting — Potions & Talismans",
+   "tuning": "🔧 Tuning / Item Attachments"
+  },
+  "common": {
+   "cancel": "Cancel",
+   "close": "Close",
+   "yes": "Yes",
+   "no": "No",
+   "assignCharacter": "Assign yourself a character (right-click the actor → Assign) or select your token.",
+   "gmOnly": "GM only."
+  },
+  "potions": {
+   "title": "⚗️ Crafting — Potions & Talismans",
+   "intro": "Artisan: <b>{name}</b> — alchemy draws on the <b>Force</b> (+1 Force die on the check). Final Encumbrance 0.",
+   "lbl": {
+    "recipe": "Recipe",
+    "skill": "Crafting skill"
+   },
+   "opt": {
+    "recipe": "{name} — {diff}, {time} h, {cost} cr (R{rarity})"
+   },
+   "btn": {
+    "roll": "Craft + roll the check",
+    "create": "Create the item"
+   },
+   "type": {
+    "potion": "🧪 Potion",
+    "talisman": "🔮 Talisman"
+   },
+   "word": {
+    "potion": "Potion",
+    "talisman": "Talisman"
+   },
+   "sum": {
+    "test": "<b>Check:</b> {diff} · <b>Time:</b> {time} h · <b>Materials:</b> {cost} cr (Rarity {rarity})"
+   },
+   "symb": "<b>Spending symbols</b> — alchemy draws on the Force {force} ({light}/{dark} generate Advantage/Threat):<br>{suc} each net Success: −2 h of brewing time (min. 1 h) · {adv}: beneficial effect · {adv}{adv}: duration / thrift · {adv}{adv}{adv}: batch / potency · {tri} or 4 {adv}: formula learned · {thr}{des}: complication.",
+   "roll": {
+    "flavor": "⚗️ {type}: {name} — {skill} ({diff})"
+   },
+   "res": {
+    "title": "⚗️ Resolution — {name}",
+    "success": "✅ Crafting succeeded — {pips} {n} net Success(es)",
+    "fail": "❌ Failure — the crafting attempt fails (ingredients wasted).",
+    "despair": "💀 Despair: serious consequence (GM).",
+    "available": "Available to spend:",
+    "complication": "· complication",
+    "spendHeader": "<b>Spending Advantage / Triumph</b> (check what you apply):",
+    "remaining": "Remaining: {adv} {tri}"
+   },
+   "cost": {
+    "triOrAdv": "{tri} or 4 {adv}"
+   },
+   "item": {
+    "batchSuffix": " (batch ×2)",
+    "madeBy": "Crafted by {name} ({skill}). Time: {time} h · Materials: {cost} cr.",
+    "upgrades": "✨ <b>Upgrades:</b> {list}.",
+    "triumphLeft": "★ Unspent Triumph — major narrative effect of the GM's choice."
+   },
+   "done": "⚗️ {item} added to {name}'s inventory.",
+   "chat": {
+    "created": "{item} — created!",
+    "meta": "Time {time} h · Materials {cost} cr"
+   },
+   "diff": {
+    "0": "Simple (—)",
+    "1": "Easy (◆)",
+    "2": "Average (◆◆)",
+    "3": "Hard (◆◆◆)",
+    "4": "Daunting (◆◆◆◆)",
+    "5": "Formidable (◆◆◆◆◆)"
+   },
+   "skill": {
+    "cool": "Cool",
+    "discipline": "Discipline",
+    "education": "Knowledge (Education)",
+    "lore": "Knowledge (Lore)"
+   },
+   "rec": {
+    "poison": {
+     "n": "Poison",
+     "eff": "Inflicts a poison: the target makes a Resilience check or suffers wound damage."
+    },
+    "protAmulet": {
+     "n": "Protective Amulet",
+     "eff": "+1 Defense (melee & ranged) while worn."
+    },
+    "acid": {
+     "n": "Acid",
+     "eff": "Destroys materials/armor; damage ignores Soak."
+    },
+    "healPotion": {
+     "n": "Healing Potion",
+     "eff": "Heals 5 wounds (once per encounter)."
+    },
+    "stimulant": {
+     "n": "Stimulant",
+     "eff": "Removes 1 Critical Injury or +1 rank to a characteristic for 5 rounds."
+    },
+    "fearFetish": {
+     "n": "Fear Fetish",
+     "eff": "Forces a Fear check on nearby enemies."
+    },
+    "fireBrew": {
+     "n": "Fire Brew",
+     "eff": "The next Engaged-range attack gains Burn 2."
+    },
+    "vigorElixir": {
+     "n": "Elixir of Vigor",
+     "eff": "Recovers all strain; grants immunity to Fear for 1 encounter."
+    },
+    "weakPotion": {
+     "n": "Weakening Potion",
+     "eff": "The target suffers −1 rank to one characteristic (Resilience to resist)."
+    },
+    "destinyTalisman": {
+     "n": "Talisman of Destiny",
+     "eff": "1×/session: reroll one check or flip a Destiny Point."
+    },
+    "powerAmulet": {
+     "n": "Amulet of Power",
+     "eff": "+1 Force die to one chosen power while worn."
+    },
+    "willPotion": {
+     "n": "Potion of Wills",
+     "eff": "Dominates a target's will (Discipline to resist)."
+    },
+    "healAccel": {
+     "n": "Healing Accelerator",
+     "eff": "Doubles the wearer's natural healing rate."
+    },
+    "neuralCharm": {
+     "n": "Neural Charm",
+     "eff": "Clouds the mind: +2 Setback to social checks against the wearer."
+    },
+    "shieldAmulet": {
+     "n": "Shield Amulet",
+     "eff": "Absorbs the first Critical Injury of the encounter."
+    },
+    "lifeWater": {
+     "n": "Water of Life",
+     "eff": "Revives or stabilizes a dying character; major narrative effects."
+    },
+    "resistSymbol": {
+     "n": "Symbol of Resistance",
+     "eff": "+2 Soak and immunity to one energy type for 1 encounter."
+    }
+   },
+   "spend": {
+    "boon": {
+     "label": "Enhanced beneficial effect",
+     "desc": "Potion: Fortifying / Invigorating · Talisman: reinforcement"
+    },
+    "dur": {
+     "label": "Extended duration",
+     "desc": "+1 h of effect, or +1 round in combat"
+    },
+    "thrift": {
+     "label": "Thrift",
+     "desc": "Materials −50% for this crafting attempt"
+    },
+    "batch": {
+     "label": "Batch",
+     "desc": "2 doses (potion) / 2 copies (talisman)"
+    },
+    "potent": {
+     "label": "Potency",
+     "desc": "+1 difficulty to resist the effect"
+    },
+    "virul": {
+     "label": "Virulence / Amplification",
+     "desc": "Aggravated effect (★ Triumph)"
+    },
+    "formula": {
+     "label": "Formula learned",
+     "desc": "−1 difficulty on future attempts to craft this recipe (★ or 4 ⬆)"
+    }
+   }
+  },
+  "saber": {
+   "title": "⚔️ Craft / Recustom — Lightsaber",
+   "intro": "Artisan: <b>{name}</b> — the <b>crystal</b> sets the profile (official dataset values). \"Possible\" mods = Step 2 upgrades, rolled separately.",
+   "mode": {
+    "recustom": "Recustomize an existing weapon",
+    "new": "New saber (compendium hilt)"
+   },
+   "lbl": {
+    "mode": "Mode",
+    "hilt": "1. Hilt",
+    "own": "1. Weapon to recustomize",
+    "crystal": "2. Kyber crystal",
+    "crystalHint": "(2 HP)",
+    "acc": "3. Attachments"
+   },
+   "opt": {
+    "hilt": "{name} — Dmg {dmg}/Crit {crit} · {hp} HP{price}",
+    "owned": "{name} — {hp} HP",
+    "crystal": "{name} — Dmg {dmg}/Crit {crit}{price} (R{rarity})",
+    "accMeta": "({hp} HP, {price} cr, R{rarity})",
+    "priceSuffix": " · {price} cr"
+   },
+   "btn": {
+    "make": "Forge / Recustom + check",
+    "sheetOnly": "Stat card only"
+   },
+   "sum": {
+    "possibleMods": "<b>Possible mods</b> (Step 2): {list}",
+    "profile": "<b>Profile</b> — Damage <b>{dmg}</b> · Critical <b>{crit}</b> · Engaged · Enc. {enc}",
+    "quals": "<b>Qualities</b>: {list}",
+    "slots": "Hard points",
+    "over": " ⚠️ over capacity",
+    "cost": "<b>Cost</b>: {price} cr · <b>Rarity</b>: {rarity}",
+    "test": "<b>Check:</b> Mechanics {d3} (or Knowledge/Lore) · 3 days · materials 300 cr or a Streetwise check {d2}.",
+    "testHint": "On your own saber: −2 difficulty (min. Simple). Force-sensitive: add a Force die {force}.",
+    "addedLine": "{name}: {list}"
+   },
+   "confirm": {
+    "overTitle": "Over capacity",
+    "overBody": "{used} hard points used out of {tot}. Continue?"
+   },
+   "roll": {
+    "flavor": "⚔️ Crafting: lightsaber ({crystal}) — Hard Mechanics (◆◆◆)"
+   },
+   "fail": {
+    "title": "⚔️ Crafting failed — {crystal}",
+    "body": "The Mechanics check fails: the saber is not assembled (components can be recovered).",
+    "despair": "💀 Despair: a crystal or part is damaged (GM's choice).",
+    "hint": "Try again with more time, better tools, or by spending a Destiny Point.",
+    "notify": "⚔️ Crafting failed ({crystal}) — no saber created."
+   },
+   "item": {
+    "name": "Lightsaber ({crystal})",
+    "forgedBy": "Forged by {name}."
+   },
+   "recap": {
+    "forge": "Forge",
+    "recustom": "Recustom",
+    "weapon": "Weapon",
+    "hilt": "Hilt",
+    "accs": "Attachments",
+    "profile": "<b>Profile</b>: Damage <b>{dmg}</b> · Critical <b>{crit}</b> · Engaged · Enc. {enc}",
+    "meta": "<b>Hard points</b>: {used}/{tot} · <b>Cost</b>: {price} cr · <b>Rarity</b>: {rarity}",
+    "effects": "Effects",
+    "possibleMods": "<b>Possible mods (Step 2)</b> — each: tool kit, 100 cr, Mechanics {pips}:"
+   },
+   "res": {
+    "success": "<b>✅ Check passed</b> — {pips} {n} success(es)",
+    "adv": "→ reduce the time or install one mod for free",
+    "tri": "→ free mod / exceptional quality",
+    "thr": "minor complication",
+    "des": "disaster (GM)",
+    "noRoll": "Stat card only (no check) — to be confirmed with a Mechanics check in play."
+   },
+   "done": {
+    "recustom": "⚔️ {name} recustomized — Dmg {dmg}/Crit {crit}.",
+    "forge": "⚔️ {name} forged for {actor} — Dmg {dmg}/Crit {crit}."
+   },
+   "qual": {
+    "breach": "Breach Quality",
+    "burn": "Burn Quality",
+    "sunder": "Sunder Quality",
+    "vicious": "Vicious Quality",
+    "disorient": "Disorient Quality",
+    "defensive": "Defensive Quality",
+    "stunDamage": "Stun Damage Quality",
+    "inaccurate": "Inaccurate Quality",
+    "stun": "Stun Quality",
+    "concussive": "Concussive Quality",
+    "knockdown": "Knockdown Quality",
+    "pierce": "Pierce Quality",
+    "superior": "Superior Quality"
+   },
+   "mod": {
+    "dmg": "Damage",
+    "burn": "Burn",
+    "vicious": "Vicious",
+    "disorient": "Disorient",
+    "concussive": "Concussive",
+    "defensive": "Defensive",
+    "breach": "Breach",
+    "knockdown": "Knockdown",
+    "stun": "Stun",
+    "pierce": "Pierce",
+    "crystalNoHp": "Extra crystal at no HP cost"
+   },
+   "att": {
+    "BARABLS": "Barab Ingot",
+    "CORRUPTCRYS": "Corrupted Crystal",
+    "CRACKEDCRYS": "Cracked Crystal",
+    "JEDHACR": "Cracked Jedha Crystal",
+    "DANTARI": "Dantari Crystal",
+    "DRAGITE": "Dragite Gem",
+    "ETAAN": "Etaan Crystal",
+    "GHOSTFIRE": "Ghostfire Crystal",
+    "ILUM": "Ilum Crystal",
+    "KIMBER": "Kimber Stone",
+    "KRAYT": "Krayt Dragon Pearl",
+    "LORRDIAN": "Lorrdian Gemstone",
+    "MEPHITE": "Mephite Crystal",
+    "NISHSTONE": "Nishalorite Stone",
+    "SAPITH": "Sapith Gem",
+    "SEEKERCRYS": "Seeker Crystal",
+    "SOLARICRYS": "Solari Crystal",
+    "SORIAN": "Sorian Crystal",
+    "TAINTNIGHT": "Tainted Nightsister Crystal",
+    "UNSTKYBER": "Unstable Kyber Crystal",
+    "VARPCRYST": "Varpeline Crystal",
+    "THONTIIN": "Thontiin Crystal",
+    "ZOPHIS": "Zophis Crystal",
+    "CHRISTOPHCRYS": "Christophsis Crystal",
+    "BLADEDRAIN": "Blade Drain",
+    "CCARRAY": "Cyclic Crystal Array",
+    "CURVEDHILT": "Curved Hilt",
+    "CUSTGRIP": "Custom Grip",
+    "DUALPHASE": "Dual-Phase Modification",
+    "EXTHILT": "Extended Hilt",
+    "FLICKERPHASE": "Flickerphase Blade",
+    "HILTMASK": "Hilt Masking Kit",
+    "POMMELCAP": "Pommel Cap",
+    "REMAGSH": "Reinforced Magnetic Shielding",
+    "STUNBLAST": "Stun Blaster Attachment",
+    "SUPHILT": "Superior Hilt Personalization",
+    "THISSCOIL": "Thisspiasian Stabilizing Coils",
+    "THOLOHILT": "Tholothian Heartwood Hilt",
+    "TRAINEMIT": "Training Lightsaber Emitter",
+    "WALKHILT": "Walking Stick Hilt Disguise",
+    "CATFAILMOD": "Catastrophic Failure Modification"
+   },
+   "note": {
+    "CORRUPTCRYS": {
+     "1": "When the character wielding this saber…",
+     "2": "When the wielder's Morality reaches 7…"
+    },
+    "CRACKEDCRYS": {
+     "1": "If a combat check results in a [DE]…"
+    },
+    "DANTARI": {
+     "1": "When making a Force power check…"
+    },
+    "ETAAN": {
+     "1": "If the wielder uses the Reflect talent…"
+    },
+    "GHOSTFIRE": {
+     "1": "The wielder may spend [AD][AD][AD][AD…"
+    },
+    "MEPHITE": {
+     "1": "Force-sensitive characters using…"
+    },
+    "NISHSTONE": {
+     "1": "Automatically adds [AD] to checks made…"
+    },
+    "SEEKERCRYS": {
+     "1": "Force-sensitive wielders may…"
+    },
+    "SOLARICRYS": {
+     "1": "Reduces the strain of the Reflect incidental by 1…",
+     "2": "The crystal stops working if the wielder's Morality…"
+    },
+    "SORIAN": {
+     "1": "When used with the Parry talent…"
+    },
+    "UNSTKYBER": {
+     "1": "As a maneuver, the wielder increases…"
+    },
+    "VARPCRYST": {
+     "1": "When spending [TR] to inflict a…"
+    },
+    "THONTIIN": {
+     "1": "Once per encounter, allows the wielder to ignore…"
+    },
+    "ZOPHIS": {
+     "1": "When the Sunder quality is activated…",
+     "2": "[TH][TH][TH] or [DE] may be spent to…"
+    },
+    "BLADEDRAIN": {
+     "1": "When making a combat check against…",
+     "2": "[TH][TH][TH] causes the blade to retract…"
+    },
+    "CCARRAY": {
+     "1": "Adds an extra crystal at no HP cost",
+     "2": "While the lightsaber is ignited, may…"
+    },
+    "CURVEDHILT": {
+     "1": "Adds an automatic [AD] to combat checks…"
+    },
+    "CUSTGRIP": {
+     "1": "Removes 1 Setback die",
+     "2": "Anyone other than the owner…"
+    },
+    "DUALPHASE": {
+     "1": "May change the blade's length once…"
+    },
+    "FLICKERPHASE": {
+     "1": "When attacking with this lightsaber…"
+    },
+    "HILTMASK": {
+     "1": "Adds [FA][FA] to any attempt to identify…"
+    },
+    "THISSCOIL": {
+     "1": "Removes 1 Setback die"
+    },
+    "THOLOHILT": {
+     "1": "The GM may spend [TH][TH][TH][TH] or…"
+    },
+    "WALKHILT": {
+     "1": "Unless it is ignited, a successful check is required…"
+    },
+    "CATFAILMOD": {
+     "1": "When the lightsaber is activated, it…"
+    }
+   }
+  },
+  "tuning": {
+   "title": "🔧 Mod Workshop",
+   "warn": {
+    "noItems": "{name} has no weapon/armor with hard points.",
+    "noAttach": "{name} has no installed attachment with activatable mods. Install an attachment first (or drag one from the compendium onto the item)."
+   },
+   "mode": {
+    "intro": "On <b>{name}</b>'s gear, what do you want to do?",
+    "install": "<b>Install an attachment</b>: mount a part on a hard point (difficulty based on rarity).",
+    "mod": "<b>Activate a mod</b>: improve an already-installed attachment — difficulty increases by 1 per mod already activated on that attachment (book rule)."
+   },
+   "btn": {
+    "install": "Install an attachment",
+    "mod": "Activate a mod (installed attachment)",
+    "installRoll": "Install + roll the check",
+    "noRoll": "Note without a check",
+    "modRoll": "Attempt the mod + check",
+    "modNoRoll": "Activate without a check"
+   },
+   "install": {
+    "title": "🔧 Tuning — installing an attachment"
+   },
+   "lbl": {
+    "item": "Item to tune",
+    "att": "Attachment",
+    "attInstalled": "Installed attachment",
+    "mod": "Mod to activate"
+   },
+   "opt": {
+    "item": "{name} — HP {used}/{total}",
+    "att": "{name} (HP {hp}, {price}cr, R{rarity})",
+    "attMod": "{item} ▸ {att} — {active}/{total} mods activated"
+   },
+   "sum": {
+    "free": "<b>{name}</b> — free hard points: {free}",
+    "att": "Attachment: <b>{name}</b> — costs <b>{hp}</b> hard point(s), {price} cr, rarity {rarity}.",
+    "notEnough": "⚠️ Not enough hard points.",
+    "test": "<b>Check:</b> Mechanics {diff} — finding the part: {price} cr or a Streetwise check."
+   },
+   "confirm": {
+    "title": "Not enough hard points",
+    "body": "{name} costs {hp} hard point(s), {free} free. Force it?"
+   },
+   "roll": {
+    "install": "🔧 Installation: {att} on {item} — Mechanics",
+    "mod": "⚙️ Modification #{n}: {mod} on {att} — Mechanics {diff}"
+   },
+   "fail": {
+    "title": "🔧 Installation failed — {att}",
+    "body": "The Mechanics check fails: the attachment is not mounted on {item}.",
+    "despair": "💀 Despair: part lost or item damaged (GM).",
+    "hint": "Try again with more time or better tools.",
+    "notify": "🔧 Installation failed ({att}) — nothing installed."
+   },
+   "card": {
+    "title": "🔧 Tuning — {item}",
+    "installed": "Attachment installed: <b>{att}</b>",
+    "meta": "Hard points: {used}/{total} · Cost: {price} cr · Rarity {rarity}"
+   },
+   "res": {
+    "success": "<b>✅ Check passed</b> — {pips} {n} success(es)",
+    "adv": "→ reduce the time or install one mod for free",
+    "tri": "free mod",
+    "thr": "minor complication",
+    "des": "disaster",
+    "noRoll": "Noted without a check — to be confirmed with a Mechanics check in play."
+   },
+   "trace": "🔧 <b>{att}</b> installed (HP {hp}).",
+   "done": {
+    "install": "{att} installed on {item}. For the full mechanics, drag the attachment from the compendium.",
+    "mod": "⚙️ {mod} activated on {att} ({now}/{total})."
+   },
+   "mod": {
+    "title": "⚙️ Activate an attachment mod",
+    "noneLeft": "— no option left —",
+    "fallbackName": "Mod",
+    "fallbackAtt": "Attachment",
+    "count": "Mods activated on this attachment: <b>{active}/{total}</b>",
+    "exhausted": "no option left",
+    "testLine": "<b>Modification #{n}</b> · <b>Check:</b> Mechanics {diff}",
+    "hint": "Base Average {pips}, +1 per mod already activated on this attachment. Cost: tool kit + 100 cr.",
+    "noneWarn": "No mod option left on this attachment."
+   },
+   "modFail": {
+    "title": "⚙️ Modification failed — {mod}",
+    "body": "The Mechanics check fails: the mod is not activated on {att}.",
+    "despair": "💀 Despair: attachment damaged, one already-installed mod is deactivated (GM).",
+    "hint": "The difficulty does not increase (the mod is not installed). Try again with more time / tools.",
+    "notify": "⚙️ Modification failed ({mod}) on {att}."
+   },
+   "modCard": {
+    "title": "⚙️ Modification — {item} ▸ {att}",
+    "activated": "Mod activated: <b>{mod}</b>",
+    "ok": "success",
+    "noRoll": "(no check)",
+    "next": "Mods activated on this attachment: <b>{now}/{total}</b> · next modification = {diff}",
+    "adv": "→ reduced time or −1 difficulty on the next one",
+    "tri": "next mod free",
+    "thr": "complication",
+    "des": "disaster"
+   },
+   "diff": {
+    "0": "Simple",
+    "1": "Easy",
+    "2": "Average",
+    "3": "Hard",
+    "4": "Daunting",
+    "5": "Formidable"
+   },
+   "att": {
+    "custGrip": {
+     "n": "Custom Grip",
+     "note": "−1 {setback} on the user's combat checks."
+    },
+    "balStock": {
+     "n": "Balanced Hilt",
+     "note": "Accurate Quality."
+    },
+    "telescope": {
+     "n": "Telescopic Optical Sight",
+     "note": "Removes up to 2 {setback} due to range (long/extreme)."
+    },
+    "magazine": {
+     "n": "Improved Magazine"
+    },
+    "bipod": {
+     "n": "Bipod Mount",
+     "note": "−1 difficulty {diff} when braced (maneuver)."
+    },
+    "laserSight": {
+     "n": "Laser Sight",
+     "note": "Adds {boost} to attack checks at short range."
+    },
+    "cortosis": {
+     "n": "Cortosis Forging",
+     "note": "Cortosis Quality."
+    },
+    "plating": {
+     "n": "Reinforced Armor Plating",
+     "note": "(armor) +1 Soak."
+    },
+    "custom": {
+     "n": "Other / custom"
+    }
+   }
+  }
+ }
+}

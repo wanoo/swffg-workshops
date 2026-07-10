@@ -1,0 +1,22 @@
+{
+ "WKSH.settings.install.name": "Module content",
+ "WKSH.settings.install.label": "Install / reinstall content",
+ "WKSH.settings.install.hint": "Creates the folder and the 3 crafting macros in this world (in the world's language).",
+ "WKSH.install.title": "Crafting Workshops — Setup",
+ "WKSH.install.prompt": "Install the crafting macros (lightsaber, potions & talismans, tuning) into this world?",
+ "WKSH.install.promptHint": "You can reinstall at any time from Configure Settings → Sabacc & Workshops.",
+ "WKSH.install.yes": "Install",
+ "WKSH.install.later": "Later",
+ "WKSH.install.gmOnly": "Only the GM can install the content.",
+ "WKSH.install.done": "Crafting Workshops: {n} items installed.",
+ "WKSH.folders.craft": "⚒️ Crafting",
+ "WKSH.macros.saber-forge": "⚔️ Craft / Recustom — Lightsaber",
+ "WKSH.macros.potions": "⚗️ Crafting — Potions & Talismans",
+ "WKSH.macros.tuning": "🔧 Tuning / Item Attachments",
+ "WKSH.common.cancel": "Cancel",
+ "WKSH.common.close": "Close",
+ "WKSH.common.yes": "Yes",
+ "WKSH.common.no": "No",
+ "WKSH.common.assignCharacter": "Assign yourself a character (right-click the actor → Assign) or select your token.",
+ "WKSH.common.gmOnly": "GM only."
+}
