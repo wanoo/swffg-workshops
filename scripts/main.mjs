@@ -3,7 +3,7 @@ import { MOD, t } from "./util.mjs";
 import { installContent } from "./installer.mjs";
 
 const LOGIC = {
-  "saber-forge": () => import("./logic/saber-forge.mjs"),
+  "saber-forge": () => import("./logic/weapon.mjs"), // v2: compendium-driven, native profile
   "potions":     () => import("./logic/potions.mjs"),
   "tuning":      () => import("./logic/tuning.mjs"),
 };
