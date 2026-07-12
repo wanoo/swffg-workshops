@@ -1149,6 +1149,11 @@
     "name": "Contenu du module",
     "label": "Installer / réinstaller le contenu",
     "hint": "Crée le dossier et les 3 macros d'artisanat dans ce monde (dans la langue du monde)."
+   },
+   "enrich": {
+    "name": "Réparer / enrichir les équipements",
+    "label": "Ouvrir l'outil de réparation",
+    "hint": "Rend lisibles les fiches d'accessoires/cristaux des armes et armures existantes, et fait fonctionner leurs mods activés. Sûr et réversible."
    }
   },
   "install": {
@@ -1175,6 +1180,20 @@
    "no": "Non",
    "assignCharacter": "Assigne-toi un personnage (clic droit sur l'acteur → Assigner) ou sélectionne ton token.",
    "gmOnly": "Réservé au MJ."
+  },
+  "enrich": {
+   "title": "🛠️ Réparer / enrichir les équipements",
+   "intro": "Répare les armes et armures déjà en jeu : ajoute les descriptions lisibles de leurs cristaux/accessoires et applique correctement leurs mods activés sur le profil.",
+   "note": "Ne touche que les objets portant des accessoires reconnus. Sauvegarde l'original (Restaurer possible).",
+   "dryRun": "Analyser",
+   "apply": "Enrichir",
+   "revert": "Restaurer",
+   "dryTitle": "Analyse — équipements à enrichir",
+   "dryLead": "{n} objet(s) concerné(s) :",
+   "rowDetail": "{descs} description(s), {mods} mod(s)",
+   "nothing": "Aucun objet à enrichir (aucun accessoire reconnu).",
+   "done": "{n} équipement(s) enrichi(s).",
+   "reverted": "{n} équipement(s) restauré(s)."
   },
   "potions": {
    "title": "⚗️ Fabrication — Potions & Talismans",

@@ -18,5 +18,20 @@
  "WKSH.common.yes": "Yes",
  "WKSH.common.no": "No",
  "WKSH.common.assignCharacter": "Assign yourself a character (right-click the actor → Assign) or select your token.",
- "WKSH.common.gmOnly": "GM only."
+ "WKSH.common.gmOnly": "GM only.",
+ "WKSH.settings.enrich.name": "Repair / enrich equipment",
+ "WKSH.settings.enrich.label": "Open the repair tool",
+ "WKSH.settings.enrich.hint": "Makes existing weapons' and armor's attachment/crystal sheets readable and their activated mods actually work. Safe and revertible.",
+ "WKSH.enrich.title": "🛠️ Repair / enrich equipment",
+ "WKSH.enrich.intro": "Repairs weapons and armor already in play: adds readable descriptions to their crystals/accessories and correctly applies their activated mods to the profile.",
+ "WKSH.enrich.note": "Only touches items carrying recognized attachments. Backs up the original (Revert available).",
+ "WKSH.enrich.dryRun": "Analyze",
+ "WKSH.enrich.apply": "Enrich",
+ "WKSH.enrich.revert": "Revert",
+ "WKSH.enrich.dryTitle": "Analysis — equipment to enrich",
+ "WKSH.enrich.dryLead": "{n} item(s) affected:",
+ "WKSH.enrich.rowDetail": "{descs} description(s), {mods} mod(s)",
+ "WKSH.enrich.nothing": "Nothing to enrich (no recognized attachments).",
+ "WKSH.enrich.done": "{n} item(s) enriched.",
+ "WKSH.enrich.reverted": "{n} item(s) reverted."
 }

@@ -1149,6 +1149,11 @@
     "name": "Module content",
     "label": "Install / reinstall content",
     "hint": "Creates the folder and the 3 crafting macros in this world (in the world's language)."
+   },
+   "enrich": {
+    "name": "Repair / enrich equipment",
+    "label": "Open the repair tool",
+    "hint": "Makes existing weapons' and armor's attachment/crystal sheets readable and their activated mods actually work. Safe and revertible."
    }
   },
   "install": {
@@ -1175,6 +1180,20 @@
    "no": "No",
    "assignCharacter": "Assign yourself a character (right-click the actor → Assign) or select your token.",
    "gmOnly": "GM only."
+  },
+  "enrich": {
+   "title": "🛠️ Repair / enrich equipment",
+   "intro": "Repairs weapons and armor already in play: adds readable descriptions to their crystals/accessories and correctly applies their activated mods to the profile.",
+   "note": "Only touches items carrying recognized attachments. Backs up the original (Revert available).",
+   "dryRun": "Analyze",
+   "apply": "Enrich",
+   "revert": "Revert",
+   "dryTitle": "Analysis — equipment to enrich",
+   "dryLead": "{n} item(s) affected:",
+   "rowDetail": "{descs} description(s), {mods} mod(s)",
+   "nothing": "Nothing to enrich (no recognized attachments).",
+   "done": "{n} item(s) enriched.",
+   "reverted": "{n} item(s) reverted."
   },
   "potions": {
    "title": "⚗️ Crafting — Potions & Talismans",

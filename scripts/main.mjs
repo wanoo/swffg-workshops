@@ -6,6 +6,7 @@ const LOGIC = {
   "saber-forge": () => import("./logic/weapon.mjs"), // v2: compendium-driven, native profile
   "potions":     () => import("./logic/potions.mjs"),
   "tuning":      () => import("./logic/tuning.mjs"),
+  "enrich":      () => import("./logic/enrich.mjs"),
 };
 
 Hooks.once("init", () => {
@@ -15,6 +16,13 @@ Hooks.once("init", () => {
     hint: "WKSH.settings.install.hint", icon: "fas fa-box-open", restricted: true,
     type: class extends FormApplication {
       async render() { installContent({ force: true }); return this; }
+    },
+  });
+  game.settings.registerMenu(MOD, "enrichMenu", {
+    name: "WKSH.settings.enrich.name", label: "WKSH.settings.enrich.label",
+    hint: "WKSH.settings.enrich.hint", icon: "fas fa-wand-magic-sparkles", restricted: true,
+    type: class extends FormApplication {
+      async render() { import("./logic/enrich.mjs").then(m => m.default()); return this; }
     },
   });
 });
