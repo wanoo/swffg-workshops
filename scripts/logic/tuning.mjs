@@ -225,7 +225,31 @@ export default async function run(scope = {}) {
       const atts = foundry.utils.duplicate(a.it.system.itemattachment || []);
       const mod = atts[a.ai].system.itemmodifier[mi];
       mod.system.rank_current = (Number(mod.system.rank_current) || 0) + 1;
-      await a.it.update({ "system.itemattachment": atts });
+      const update = { "system.itemattachment": atts };
+      // an attachment's own mods are NOT summed into the profile by the system → mirror the mod's
+      // functional attribute onto the base item's itemmodifier (which IS summed) so the profile updates.
+      let fnAttrs = Object.values(mod.system?.attributes || {}).filter(x => x && /Weapon Stat|Armor Stat|Stat/i.test(x.modtype || ""));
+      if (!fnAttrs.length) { // legacy mods carry no attribute → derive from the mod name
+        const num = /([+-]?\d+)/.exec(modName);
+        if (num) {
+          let value = parseInt(num[1], 10);
+          const mt = a.it.type === "armour" ? "Armor Stat" : "Weapon Stat";
+          if (/critique|\bcrit/i.test(modName)) fnAttrs = [{ mod: "critical", modtype: mt, value: /réduit|reduce|-|sub/i.test(modName) ? -Math.abs(value) : value, isCheckbox: false }];
+          else if (/d[ée]g[âa]ts?|damage/i.test(modName)) fnAttrs = [{ mod: "damage", modtype: mt, value: Math.abs(value), isCheckbox: false }];
+          else if (/encaissement|soak/i.test(modName)) fnAttrs = [{ mod: "soak", modtype: "Armor Stat", value: Math.abs(value), isCheckbox: false }];
+          else if (/d[ée]fense|defen/i.test(modName)) fnAttrs = [{ mod: "defence", modtype: "Armor Stat", value: Math.abs(value), isCheckbox: false }];
+        }
+      }
+      if (fnAttrs.length) {
+        const wmods = foundry.utils.duplicate(a.it.system.itemmodifier || []);
+        const attributes = {};
+        for (const x of fnAttrs) attributes[foundry.utils.randomID()] = { ...x };
+        wmods.push({ name: `${modName} (${a.name})`, type: "itemmodifier",
+          system: { active: true, rank: 1, rank_current: 1, description: "",
+            type: a.it.type === "armour" ? "armour" : "weapon", attributes, itemmodifier: [], adjusteditemmodifer: [] } });
+        update["system.itemmodifier"] = wmods;
+      }
+      await a.it.update(update);
       const nowActive = a.active + 1;
       const spendLine = res && (res.adv || res.tri || res.thr || res.des)
         ? `<div style="font-size:12px;margin-top:3px">${res.adv ? `${sym('adv').repeat(res.adv)} ${t("tuning.modCard.adv")} ` : ""}${res.tri ? `${sym('tri')} ${t("tuning.modCard.tri")} ` : ""}${res.thr ? `${sym('thr').repeat(res.thr)} ${t("tuning.modCard.thr")} ` : ""}${res.des ? `${sym('des')} ${t("tuning.modCard.des")}` : ""}</div>` : "";

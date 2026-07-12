@@ -112,8 +112,9 @@ export async function buildAttachmentObject(key, family) {
     }
   }
 
+  const desc = t(`attach.desc.${key}`);
   const attachment = { name: t(`attach.name.${key}`), type: "itemattachment",
-    system: { description: "", type: itemType, rank: 1,
+    system: { description: desc.startsWith("WKSH.") ? "" : desc, type: itemType, rank: 1,
       hardpoints: { value: a.hp }, price: { value: a.price }, rarity: { value: a.rarity },
       attributes: {}, itemmodifier: attMods, adjusteditemmodifer: [], itemattachment: [] } };
   return { weaponMods, attachment, setStats };
