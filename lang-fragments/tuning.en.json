@@ -88,5 +88,14 @@
  "WKSH.tuning.att.cortosis.note": "Cortosis Quality.",
  "WKSH.tuning.att.plating.n": "Reinforced Armor Plating",
  "WKSH.tuning.att.plating.note": "(armor) +1 Soak.",
- "WKSH.tuning.att.custom.n": "Other / custom"
+ "WKSH.tuning.att.custom.n": "Other / custom",
+ "WKSH.tuning.install.noParts": "No compatible attachment for this item.",
+ "WKSH.tuning.install.pick": "Select at least one attachment.",
+ "WKSH.tuning.sum.slotsUsed": "Slots:",
+ "WKSH.tuning.sum.cost": "Cost: {price} cr · Rarity {rarity}",
+ "WKSH.tuning.sum.testDyn": "<b>Check:</b> Mechanics {diff}",
+ "WKSH.tuning.sum.weaponProfile": "Preview — Damage <b>{dmg}</b> · Critical <b>{crit}</b>",
+ "WKSH.tuning.sum.armorProfile": "Preview — Soak <b>{soak}</b> · Defence <b>{def}</b>",
+ "WKSH.tuning.card.weaponProfile": "Profile — Damage <b>{dmg}</b> · Critical <b>{crit}</b>",
+ "WKSH.tuning.card.armorProfile": "Profile — Soak <b>{soak}</b> · Defence <b>{def}</b>"
 }

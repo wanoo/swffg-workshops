@@ -88,5 +88,14 @@
  "WKSH.tuning.att.cortosis.note": "Qualité Cortosis.",
  "WKSH.tuning.att.plating.n": "Doublure de plaques",
  "WKSH.tuning.att.plating.note": "(armure) +1 Encaissement.",
- "WKSH.tuning.att.custom.n": "Autre / personnalisé"
+ "WKSH.tuning.att.custom.n": "Autre / personnalisé",
+ "WKSH.tuning.install.noParts": "Aucun accessoire compatible pour cet objet.",
+ "WKSH.tuning.install.pick": "Coche au moins un accessoire.",
+ "WKSH.tuning.sum.slotsUsed": "Emplacements :",
+ "WKSH.tuning.sum.cost": "Coût : {price} cr · Rareté {rarity}",
+ "WKSH.tuning.sum.testDyn": "<b>Test :</b> Mécanique {diff}",
+ "WKSH.tuning.sum.weaponProfile": "Profil prévu — Dégâts <b>{dmg}</b> · Critique <b>{crit}</b>",
+ "WKSH.tuning.sum.armorProfile": "Profil prévu — Encaissement <b>{soak}</b> · Défense <b>{def}</b>",
+ "WKSH.tuning.card.weaponProfile": "Profil — Dégâts <b>{dmg}</b> · Critique <b>{crit}</b>",
+ "WKSH.tuning.card.armorProfile": "Profil — Encaissement <b>{soak}</b> · Défense <b>{def}</b>"
 }

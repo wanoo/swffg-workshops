@@ -1171,7 +1171,8 @@
   "macros": {
    "saber-forge": "⚔️ Craft / Recustom — Lightsaber",
    "potions": "⚗️ Crafting — Potions & Talismans",
-   "tuning": "🔧 Tuning / Item Attachments"
+   "tuning": "🔧 Tuning / Item Attachments",
+   "atelier": "⚒️ Crafting Workshop"
   },
   "common": {
    "cancel": "Cancel",
@@ -1194,6 +1195,20 @@
    "nothing": "Nothing to enrich (no recognized attachments).",
    "done": "{n} item(s) enriched.",
    "reverted": "{n} item(s) reverted."
+  },
+  "atelier": {
+   "title": "⚒️ Crafting Workshop",
+   "intro": "What do you want to craft or modify?",
+   "li": {
+    "saber": "<b>Lightsaber</b>: forge/recustom (hilt + crystal + accessories).",
+    "tune": "<b>Weapon / Armor</b>: install attachments or activate their mods.",
+    "gear": "<b>Equipment</b>: potions & talismans (Force alchemy)."
+   },
+   "btn": {
+    "saber": "Lightsaber",
+    "tune": "Weapon / Armor",
+    "gear": "Equipment"
+   }
   },
   "potions": {
    "title": "⚗️ Crafting — Potions & Talismans",
@@ -1616,7 +1631,9 @@
     "modNoRoll": "Activate without a check"
    },
    "install": {
-    "title": "🔧 Tuning — installing an attachment"
+    "title": "🔧 Tuning — installing an attachment",
+    "noParts": "No compatible attachment for this item.",
+    "pick": "Select at least one attachment."
    },
    "lbl": {
     "item": "Item to tune",
@@ -1633,7 +1650,12 @@
     "free": "<b>{name}</b> — free hard points: {free}",
     "att": "Attachment: <b>{name}</b> — costs <b>{hp}</b> hard point(s), {price} cr, rarity {rarity}.",
     "notEnough": "⚠️ Not enough hard points.",
-    "test": "<b>Check:</b> Mechanics {diff} — finding the part: {price} cr or a Streetwise check."
+    "test": "<b>Check:</b> Mechanics {diff} — finding the part: {price} cr or a Streetwise check.",
+    "slotsUsed": "Slots:",
+    "cost": "Cost: {price} cr · Rarity {rarity}",
+    "testDyn": "<b>Check:</b> Mechanics {diff}",
+    "weaponProfile": "Preview — Damage <b>{dmg}</b> · Critical <b>{crit}</b>",
+    "armorProfile": "Preview — Soak <b>{soak}</b> · Defence <b>{def}</b>"
    },
    "confirm": {
     "title": "Not enough hard points",
@@ -1653,7 +1675,9 @@
    "card": {
     "title": "🔧 Tuning — {item}",
     "installed": "Attachment installed: <b>{att}</b>",
-    "meta": "Hard points: {used}/{total} · Cost: {price} cr · Rarity {rarity}"
+    "meta": "Hard points: {used}/{total} · Cost: {price} cr · Rarity {rarity}",
+    "weaponProfile": "Profile — Damage <b>{dmg}</b> · Critical <b>{crit}</b>",
+    "armorProfile": "Profile — Soak <b>{soak}</b> · Defence <b>{def}</b>"
    },
    "res": {
     "success": "<b>✅ Check passed</b> — {pips} {n} success(es)",

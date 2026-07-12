@@ -3,6 +3,7 @@
 import { MOD, t, findMacro } from "./util.mjs";
 
 const MACROS = [
+  { role: "atelier",     img: "icons/tools/smithing/anvil.webp" },
   { role: "saber-forge", img: "icons/weapons/swords/sword-laser-red.webp" },
   { role: "potions",     img: "icons/consumables/potions/bottle-round-corked-red.webp" },
   { role: "tuning",      img: "icons/tools/smithing/hammer-and-anvil.webp" },

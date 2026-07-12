@@ -1171,7 +1171,8 @@
   "macros": {
    "saber-forge": "⚔️ Fabrication / Recustom — Sabre Laser",
    "potions": "⚗️ Fabrication — Potions & Talismans",
-   "tuning": "🔧 Réglage / Accessoires d'objet"
+   "tuning": "🔧 Réglage / Accessoires d'objet",
+   "atelier": "⚒️ Atelier de fabrication"
   },
   "common": {
    "cancel": "Annuler",
@@ -1194,6 +1195,20 @@
    "nothing": "Aucun objet à enrichir (aucun accessoire reconnu).",
    "done": "{n} équipement(s) enrichi(s).",
    "reverted": "{n} équipement(s) restauré(s)."
+  },
+  "atelier": {
+   "title": "⚒️ Atelier de fabrication",
+   "intro": "Que veux-tu fabriquer ou modifier ?",
+   "li": {
+    "saber": "<b>Sabre laser</b> : forge/recustom (poignée + cristal + accessoires).",
+    "tune": "<b>Arme / Armure</b> : poser des accessoires ou activer leurs mods.",
+    "gear": "<b>Équipement</b> : potions & talismans (alchimie de la Force)."
+   },
+   "btn": {
+    "saber": "Sabre laser",
+    "tune": "Arme / Armure",
+    "gear": "Équipement"
+   }
   },
   "potions": {
    "title": "⚗️ Fabrication — Potions & Talismans",
@@ -1616,7 +1631,9 @@
     "modNoRoll": "Activer sans test"
    },
    "install": {
-    "title": "🔧 Réglage — pose d'un accessoire"
+    "title": "🔧 Réglage — pose d'un accessoire",
+    "noParts": "Aucun accessoire compatible pour cet objet.",
+    "pick": "Coche au moins un accessoire."
    },
    "lbl": {
     "item": "Objet à régler",
@@ -1633,7 +1650,12 @@
     "free": "<b>{name}</b> — emplacements libres : {free}",
     "att": "Accessoire : <b>{name}</b> — coûte <b>{hp}</b> emplacement(s), {price} cr, rareté {rarity}.",
     "notEnough": "⚠️ Pas assez d'emplacements.",
-    "test": "<b>Test :</b> Mécanique {diff} — trouver la pièce : {price} cr ou test de Système D."
+    "test": "<b>Test :</b> Mécanique {diff} — trouver la pièce : {price} cr ou test de Système D.",
+    "slotsUsed": "Emplacements :",
+    "cost": "Coût : {price} cr · Rareté {rarity}",
+    "testDyn": "<b>Test :</b> Mécanique {diff}",
+    "weaponProfile": "Profil prévu — Dégâts <b>{dmg}</b> · Critique <b>{crit}</b>",
+    "armorProfile": "Profil prévu — Encaissement <b>{soak}</b> · Défense <b>{def}</b>"
    },
    "confirm": {
     "title": "Emplacements insuffisants",
@@ -1653,7 +1675,9 @@
    "card": {
     "title": "🔧 Réglage — {item}",
     "installed": "Accessoire installé : <b>{att}</b>",
-    "meta": "Emplacements : {used}/{total} · Coût : {price} cr · Rareté {rarity}"
+    "meta": "Emplacements : {used}/{total} · Coût : {price} cr · Rareté {rarity}",
+    "weaponProfile": "Profil — Dégâts <b>{dmg}</b> · Critique <b>{crit}</b>",
+    "armorProfile": "Profil — Encaissement <b>{soak}</b> · Défense <b>{def}</b>"
    },
    "res": {
     "success": "<b>✅ Test réussi</b> — {pips} {n} succès",

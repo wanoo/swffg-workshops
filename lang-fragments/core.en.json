@@ -33,5 +33,14 @@
  "WKSH.enrich.rowDetail": "{descs} description(s), {mods} mod(s)",
  "WKSH.enrich.nothing": "Nothing to enrich (no recognized attachments).",
  "WKSH.enrich.done": "{n} item(s) enriched.",
- "WKSH.enrich.reverted": "{n} item(s) reverted."
+ "WKSH.enrich.reverted": "{n} item(s) reverted.",
+ "WKSH.macros.atelier": "⚒️ Crafting Workshop",
+ "WKSH.atelier.title": "⚒️ Crafting Workshop",
+ "WKSH.atelier.intro": "What do you want to craft or modify?",
+ "WKSH.atelier.li.saber": "<b>Lightsaber</b>: forge/recustom (hilt + crystal + accessories).",
+ "WKSH.atelier.li.tune": "<b>Weapon / Armor</b>: install attachments or activate their mods.",
+ "WKSH.atelier.li.gear": "<b>Equipment</b>: potions & talismans (Force alchemy).",
+ "WKSH.atelier.btn.saber": "Lightsaber",
+ "WKSH.atelier.btn.tune": "Weapon / Armor",
+ "WKSH.atelier.btn.gear": "Equipment"
 }

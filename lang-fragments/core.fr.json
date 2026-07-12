@@ -33,5 +33,14 @@
  "WKSH.enrich.rowDetail": "{descs} description(s), {mods} mod(s)",
  "WKSH.enrich.nothing": "Aucun objet à enrichir (aucun accessoire reconnu).",
  "WKSH.enrich.done": "{n} équipement(s) enrichi(s).",
- "WKSH.enrich.reverted": "{n} équipement(s) restauré(s)."
+ "WKSH.enrich.reverted": "{n} équipement(s) restauré(s).",
+ "WKSH.macros.atelier": "⚒️ Atelier de fabrication",
+ "WKSH.atelier.title": "⚒️ Atelier de fabrication",
+ "WKSH.atelier.intro": "Que veux-tu fabriquer ou modifier ?",
+ "WKSH.atelier.li.saber": "<b>Sabre laser</b> : forge/recustom (poignée + cristal + accessoires).",
+ "WKSH.atelier.li.tune": "<b>Arme / Armure</b> : poser des accessoires ou activer leurs mods.",
+ "WKSH.atelier.li.gear": "<b>Équipement</b> : potions & talismans (alchimie de la Force).",
+ "WKSH.atelier.btn.saber": "Sabre laser",
+ "WKSH.atelier.btn.tune": "Arme / Armure",
+ "WKSH.atelier.btn.gear": "Équipement"
 }
