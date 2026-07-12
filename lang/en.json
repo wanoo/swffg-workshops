@@ -1208,7 +1208,8 @@
     "saber": "Lightsaber",
     "tune": "Weapon / Armor",
     "gear": "Equipment"
-   }
+   },
+   "craftFor": "Craft for"
   },
   "journals": {
    "workshop-rules": "🛠️ Workshops — Rules & how-to"

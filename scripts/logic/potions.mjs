@@ -2,7 +2,7 @@
 import { t, sym, pips, RollFFG, myActor } from "../util.mjs";
 
 export default async function run(scope = {}) {
-  const actor = myActor();
+  const actor = (scope.actor && game.actors.get(scope.actor)) || myActor();
   if (!actor) { ui.notifications.warn(t("common.assignCharacter")); return; }
   const actorName = actor.name;
   const Roll = RollFFG();

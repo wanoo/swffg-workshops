@@ -1208,7 +1208,8 @@
     "saber": "Sabre laser",
     "tune": "Arme / Armure",
     "gear": "Équipement"
-   }
+   },
+   "craftFor": "Fabriquer pour"
   },
   "journals": {
    "workshop-rules": "🛠️ Ateliers — Règles & fonctionnement"

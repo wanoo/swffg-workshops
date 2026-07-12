@@ -45,5 +45,6 @@
  "WKSH.atelier.btn.gear": "Equipment",
  "WKSH.journals.workshop-rules": "🛠️ Workshops — Rules & how-to",
  "WKSH.scenes.scene-atelier-mod": "🛠️ Modding Workshop",
- "WKSH.scenes.scene-atelier-potion": "☘️ Alchemy Workshop"
+ "WKSH.scenes.scene-atelier-potion": "☘️ Alchemy Workshop",
+ "WKSH.atelier.craftFor": "Craft for"
 }

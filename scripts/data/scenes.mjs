@@ -9,7 +9,7 @@ export const SCENES = [
     tiles: [
       { texture: "assets/chips/chip-forge.svg",     x: 1620, y: 1023, w: 100, h: 100, macro: "saber-forge" },
       { texture: "assets/chips/chip-reglage.svg",    x: 1005, y: 1113, w: 100, h: 100, macro: "tuning" },
-      { texture: "icons/tools/smithing/anvil.webp",  x: 1204, y: 994,  w: 100, h: 100, macro: "atelier" },
+      { texture: "assets/chips/chip-atelier.svg",  x: 1204, y: 994,  w: 100, h: 100, macro: "atelier" },
     ],
   },
   {
@@ -18,7 +18,7 @@ export const SCENES = [
     background: "assets/scenes/atelier-potion.png",
     tiles: [
       { texture: "assets/chips/chip-alchimie.svg",   x: 608, y: 1013, w: 100, h: 100, macro: "potions" },
-      { texture: "icons/tools/smithing/anvil.webp",  x: 760, y: 1013, w: 100, h: 100, macro: "atelier" },
+      { texture: "assets/chips/chip-atelier.svg",  x: 760, y: 1013, w: 100, h: 100, macro: "atelier" },
     ],
   },
 ];

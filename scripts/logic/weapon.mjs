@@ -5,7 +5,7 @@ import { skillPool, rollCraft } from "../lib/roll.mjs";
 import { loadAttachmentData, listFor, applyAttachments } from "../lib/attach.mjs";
 
 export default async function run(scope = {}) {
-  const actor = myActor();
+  const actor = (scope.actor && game.actors.get(scope.actor)) || myActor();
   if (!actor) { ui.notifications.warn(t("common.assignCharacter")); return; }
   const loc = n => (n ?? 0).toLocaleString(game.i18n.lang);
   const stripQ = n => n.replace(/^Qualité\s+/i, "").replace(/\s+Quality$/i, "");
