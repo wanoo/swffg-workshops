@@ -1213,6 +1213,10 @@
   "journals": {
    "workshop-rules": "🛠️ Workshops — Rules & how-to"
   },
+  "scenes": {
+   "scene-atelier-mod": "🛠️ Modding Workshop",
+   "scene-atelier-potion": "☘️ Alchemy Workshop"
+  },
   "potions": {
    "title": "⚗️ Crafting — Potions & Talismans",
    "intro": "Artisan: <b>{name}</b> — alchemy draws on the <b>Force</b> (+1 Force die on the check). Final Encumbrance 0.",

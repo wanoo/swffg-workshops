@@ -43,5 +43,7 @@
  "WKSH.atelier.btn.saber": "Sabre laser",
  "WKSH.atelier.btn.tune": "Arme / Armure",
  "WKSH.atelier.btn.gear": "Équipement",
- "WKSH.journals.workshop-rules": "🛠️ Ateliers — Règles & fonctionnement"
+ "WKSH.journals.workshop-rules": "🛠️ Ateliers — Règles & fonctionnement",
+ "WKSH.scenes.scene-atelier-mod": "🛠️ Atelier de Mod",
+ "WKSH.scenes.scene-atelier-potion": "☘️ Atelier de Potion"
 }

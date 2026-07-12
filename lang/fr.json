@@ -1213,6 +1213,10 @@
   "journals": {
    "workshop-rules": "🛠️ Ateliers — Règles & fonctionnement"
   },
+  "scenes": {
+   "scene-atelier-mod": "🛠️ Atelier de Mod",
+   "scene-atelier-potion": "☘️ Atelier de Potion"
+  },
   "potions": {
    "title": "⚗️ Fabrication — Potions & Talismans",
    "intro": "Artisan : <b>{name}</b> — l'alchimie fait appel à la <b>Force</b> (+1 dé de Force au test). Enc. finale 0.",

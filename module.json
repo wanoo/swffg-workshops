@@ -2,7 +2,7 @@
   "id": "swffg-workshops",
   "title": "Crafting Workshops — Star Wars FFG",
   "description": "Interactive crafting workshops for the Star Wars FFG system: lightsaber forge & recustom (compendium-driven hilts, 24 crystals, 17 attachments), Force alchemy (17 potion & talisman recipes with contextual advantage/triumph spending) and attachment tuning with the book-accurate mod difficulty escalation. The dice check comes first and its result decides the outcome. Fully bilingual English/French.",
-  "version": "2.0.0-beta.6",
+  "version": "2.0.0-beta.7",
   "authors": [
     {
       "name": "wanoo"
