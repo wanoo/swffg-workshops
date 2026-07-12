@@ -153,8 +153,9 @@ export async function listFor(target, family, opts = {}) {
     if (family === "weapon") {
       if (opts.crystal === true && !a.isCrystal) continue;
       if (opts.crystal === false && a.isCrystal) continue;
-      if (isSaber) { if (!a.isCrystal && !lightsaberLimited && (lim.category.length || lim.type.length)) continue; }
-      else if (lightsaberLimited || a.isCrystal) continue;
+      // saber accessories must be lightsaber-limited (not universal weapon mods)
+      if (isSaber) { if (!a.isCrystal && !lightsaberLimited) continue; }
+      else if (lightsaberLimited || a.isCrystal) continue; // hide saber-only parts from non-sabers
     }
     if (lim.item.length && target && !lim.item.includes(target.system?.originalKey) && !lim.item.includes(target.name)) continue;
     if (lim.skill.length && targetSkill && !lim.skill.includes(targetSkill)) continue;
