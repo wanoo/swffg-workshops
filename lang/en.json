@@ -1218,6 +1218,14 @@
    "scene-atelier-mod": "🛠️ Modding Workshop",
    "scene-atelier-potion": "☘️ Alchemy Workshop"
   },
+  "error": {
+   "title": "⚠️ Error — Crafting Workshops",
+   "body": "An unexpected error occurred in the module.",
+   "ask": "You can open a pre-filled ticket (with the technical context) so it can be fixed.",
+   "report": "Open a GitHub issue",
+   "copy": "Copy the report",
+   "copied": "Report copied to clipboard."
+  },
   "potions": {
    "title": "⚗️ Crafting — Potions & Talismans",
    "intro": "Artisan: <b>{name}</b> — alchemy draws on the <b>Force</b> (+1 Force die on the check). Final Encumbrance 0.",

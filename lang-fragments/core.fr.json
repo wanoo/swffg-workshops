@@ -46,5 +46,11 @@
  "WKSH.journals.workshop-rules": "🛠️ Ateliers — Règles & fonctionnement",
  "WKSH.scenes.scene-atelier-mod": "🛠️ Atelier de Mod",
  "WKSH.scenes.scene-atelier-potion": "☘️ Atelier de Potion",
- "WKSH.atelier.craftFor": "Fabriquer pour"
+ "WKSH.atelier.craftFor": "Fabriquer pour",
+ "WKSH.error.title": "⚠️ Erreur — Ateliers d'artisanat",
+ "WKSH.error.body": "Une erreur inattendue s'est produite dans le module.",
+ "WKSH.error.ask": "Tu peux ouvrir un ticket pré-rempli (avec le contexte technique) pour qu'on la corrige.",
+ "WKSH.error.report": "Ouvrir une issue GitHub",
+ "WKSH.error.copy": "Copier le rapport",
+ "WKSH.error.copied": "Rapport copié dans le presse-papiers."
 }

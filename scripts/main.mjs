@@ -1,5 +1,5 @@
 /** Crafting Workshops — entry point. Exposes the API and offers first-run content install. */
-import { MOD, t } from "./util.mjs";
+import { MOD, t, reportError } from "./util.mjs";
 import { installContent } from "./installer.mjs";
 
 const LOGIC = {
@@ -34,11 +34,16 @@ Hooks.once("ready", async () => {
     run: async (slug, scope = {}) => {
       const loader = LOGIC[slug];
       if (!loader) return ui.notifications.error(`[${MOD}] unknown action: ${slug}`);
-      const { default: fn } = await loader();
-      return fn(scope);
+      try { const { default: fn } = await loader(); return await fn(scope); }
+      catch (err) { reportError(err, `run("${slug}")`); }
     },
     install: installContent,
+    reportError,
   };
+  // catch errors bubbling out of dialog callbacks whose stack points at this module
+  const fromModule = e => String(e?.stack || "").includes(MOD);
+  window.addEventListener("unhandledrejection", ev => { if (fromModule(ev.reason)) reportError(ev.reason, "async"); });
+  window.addEventListener("error", ev => { if (fromModule(ev.error)) reportError(ev.error, "runtime"); });
   if (game.user.isGM && game.settings.get(MOD, "installedVersion") === "") {
     new Dialog({
       title: t("install.title"),

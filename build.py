@@ -40,6 +40,6 @@ if "--zip" in sys.argv:
     with zipfile.ZipFile(z, "w", zipfile.ZIP_DEFLATED) as zf:
         for p in ROOT.rglob("*"):
             rel = p.relative_to(ROOT)
-            if rel.parts[0] in ("_dump","lang-fragments","dist",".git") or rel.name in ("build.py",".DS_Store"): continue
+            if rel.parts[0] in ("_dump","lang-fragments","dist","media",".git") or rel.name in ("build.py",".DS_Store"): continue
             if p.is_file(): zf.write(p, pathlib.Path(MODID)/rel)
     print(f"zip: {z} ({z.stat().st_size/1048576:.1f} Mo)")

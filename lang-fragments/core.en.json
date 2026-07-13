@@ -46,5 +46,11 @@
  "WKSH.journals.workshop-rules": "🛠️ Workshops — Rules & how-to",
  "WKSH.scenes.scene-atelier-mod": "🛠️ Modding Workshop",
  "WKSH.scenes.scene-atelier-potion": "☘️ Alchemy Workshop",
- "WKSH.atelier.craftFor": "Craft for"
+ "WKSH.atelier.craftFor": "Craft for",
+ "WKSH.error.title": "⚠️ Error — Crafting Workshops",
+ "WKSH.error.body": "An unexpected error occurred in the module.",
+ "WKSH.error.ask": "You can open a pre-filled ticket (with the technical context) so it can be fixed.",
+ "WKSH.error.report": "Open a GitHub issue",
+ "WKSH.error.copy": "Copy the report",
+ "WKSH.error.copied": "Report copied to clipboard."
 }

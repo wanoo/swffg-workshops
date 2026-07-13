@@ -1218,6 +1218,14 @@
    "scene-atelier-mod": "🛠️ Atelier de Mod",
    "scene-atelier-potion": "☘️ Atelier de Potion"
   },
+  "error": {
+   "title": "⚠️ Erreur — Ateliers d'artisanat",
+   "body": "Une erreur inattendue s'est produite dans le module.",
+   "ask": "Tu peux ouvrir un ticket pré-rempli (avec le contexte technique) pour qu'on la corrige.",
+   "report": "Ouvrir une issue GitHub",
+   "copy": "Copier le rapport",
+   "copied": "Rapport copié dans le presse-papiers."
+  },
   "potions": {
    "title": "⚗️ Fabrication — Potions & Talismans",
    "intro": "Artisan : <b>{name}</b> — l'alchimie fait appel à la <b>Force</b> (+1 dé de Force au test). Enc. finale 0.",
